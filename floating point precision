@@ -1,0 +1,65 @@
+#include <iostream>
+#include <iomanip>
+#include <string>
+
+using namespace std;
+
+int main (){
+    string name = "Alice Johnson";
+    int age {25}; //int age = 25;
+    double gpa = 3.87654321; 
+    double pi = 3.14159265359;
+    
+    //==================================
+    // part 1: floating point precision
+    //==================================
+    
+    cout << "===precision example===\n"; 
+    
+    //without fixed, set precision means
+    //aproximately 2 significant digits
+    cout << "Pi (precision 2): " << setprecision(5) << pi << endl;
+    
+    //fixed makes precision represent the 
+    // the number of decimal points
+    cout << "Pi (fixed, 2 decimals):" 
+        << fixed << setprecision(4)
+        << pi << endl; 
+    
+    //restore general floating point format
+    cout << defaultfloat << setprecision(6);
+    
+    // === Part 2: COLUMN width and alignment === 
+    cout << "\n=== Student Record ===\n ";
+    
+    //setfill ("-") - use dashes for padding
+    cout <<setfill ('*') << setw(35) << "" << endl; 
+    cout <<setfill (' '); //restore normal spacing
+    
+    //print column headers
+    cout << left << setw (17) << "Name"
+    << right << setw (6) << "Age"
+    << setw (12) << "GPA"
+    << endl; 
+    
+    cout<< left << setw(17) << name 
+    << right << setw(6) << age 
+    << fixed << setprecision (2) 
+    << setw(12) << gpa
+    << endl; 
+    
+     cout <<setfill ('*') << setw(35) << "" << endl; 
+    
+    // === part 3: number representation === 
+    int number = 255; 
+    
+    cout << setfill (' ');
+    
+    //decimals 
+    cout << dec << "\nDecimal: " << number << endl;  
+    
+    cout << hex << "Hex: " << number << endl; 
+    
+    cout << oct << "Octal: " << number << endl;
+     
+ }
