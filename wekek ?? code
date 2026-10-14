@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int main (){ 
+    int age = 0;
+    
+    cout << "Enter your age hoe: ";
+ 
+    if(!(cin>>age)){
+        cerr << "Error: Please Enter a Number \n";
+        return 1; 
+    }  
+    
+    if (age <0 || age > 120){
+        cerr << "Error: You do no exist!\n";
+        
+        return 1;
+    }
+    cout << "your age is: " << age << endl;
+
+clog << "[LOG] your program works fine!\n";
+
+return 0;
+}
